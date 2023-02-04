@@ -14,7 +14,7 @@ var corsOptions = {
 const server = express();
 
 //options for cors midddleware
-server.use(cors(corsOptions));
+server.use(cors());
 
 server.use(morgan("dev"));
 server.use(express.json());

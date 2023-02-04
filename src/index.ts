@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import database from "./config/database";
 import server from "./app";
-const PORT = 3001;
+const puerto = process.env.PORT;
 
 database
 	.initialize()
@@ -10,6 +10,6 @@ database
 	})
 	.catch(console.error);
 
-server.listen(PORT, () => {
-	console.log("Running on port " + PORT);
+server.listen(puerto, () => {
+	console.log("Running on port " + puerto);
 });
