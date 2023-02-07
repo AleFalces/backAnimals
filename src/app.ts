@@ -4,12 +4,6 @@ import router from "./routes/index";
 import cors from "cors";
 import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config();
-var corsOptions = {
-	origin: ["*"],
-	headers: "*",
-	methods: "*",
-	credentials: true,
-};
 
 const server = express();
 
