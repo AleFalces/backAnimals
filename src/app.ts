@@ -21,7 +21,7 @@ server.use(express.json());
 const mercadopago = require("mercadopago");
 // Agrega credenciales
 mercadopago.configure({
-	access_token: process.env.ACCES_TOKEN,
+  access_token: process.env.ACCES_TOKEN,
 });
 
 server.use("/", router);

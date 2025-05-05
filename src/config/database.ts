@@ -7,22 +7,22 @@ import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-
 dotenv.config();
 
 // export default new DataSource({
-// 	type: "postgres",
-// 	host: "localhost",
-// 	port: 5432,
-// 	username: process.env.DB_USER,
-// 	password: process.env.DB_PASSWORD,
-// 	database: process.env.DB_NAME,
-// 	entities: [Pet, User, Product, Veterinary],
-// 	synchronize: true,
-// 	logging: false,
+//   type: "postgres",
+//   host: "localhost",
+//   port: 5432,
+//   username: process.env.DB_USER,
+//   password: process.env.DB_PASSWORD,
+//   database: process.env.DB_NAME,
+//   entities: [Pet, User, Product, Veterinary],
+//   synchronize: true,
+//   logging: false,
 // });
 
 export default new DataSource({
-	name: "default",
-	type: "postgres",
-	url: process.env.DB_DEPLOY,
-	entities: [Pet, User, Product, Veterinary],
-	synchronize: false,
-	logging: false,
+  name: "default",
+  type: "postgres",
+  url: process.env.DATABASE_URL,
+  entities: [Pet, User, Product, Veterinary],
+  synchronize: true,
+  logging: false,
 });
